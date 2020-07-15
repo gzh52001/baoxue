@@ -1,12 +1,12 @@
 import React from 'react';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
-import { Menu, Row, Col } from 'antd';
+import { Menu } from 'antd';
 import { HomeOutlined, UserOutlined, EyeOutlined ,
     ShoppingCartOutlined} from '@ant-design/icons';
 
 import 'antd/dist/antd.css'
 //引入样式
-
+import './css/App.css'
 
 //引入页面组件
 import Home from './pages/Home'
@@ -61,28 +61,24 @@ class App extends React.Component {
         })
     }
     render() {
-        const { menu, current } = this.state;
+        const { menu} = this.state;
         return (
             <div className="container">
-                <Row gutter={10} style={{ backgroundColor: '#001529' }}>
-                    <Col span={16}>
+                  
                         <Menu
                             mode="horizontal"
                             theme="dark"
                             onClick={this.changeMenu}
-                            selectedKeys={[current]}
+                           
                             className="row"
                         >
                             {
                                 menu.map(item => (
-                                    <Menu.Item title={item.title} key={item.path} icon={item.icon}>{item.title}</Menu.Item>
+                                    <Menu.Item title={item.title} key={item.path} icon={item.icon} className="item">{item.title }</Menu.Item>
                                 ))
                             }
                         </Menu>
-                    </Col>
                   
-
-                </Row>
 
                 <Switch>
                     {
