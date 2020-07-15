@@ -4,21 +4,18 @@
 }
 
 .container {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 1000;
+  width: 100%;
 }
 
-.container .row {
+.container .menu {
   height: 3.125rem;
   width: 100%;
   position: fixed;
+  margin: 0;
   bottom: 0;
 }
 
-.container .row .item {
+.container .menu .item {
   width: 25%;
   height: 100%;
 }

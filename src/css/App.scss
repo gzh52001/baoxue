@@ -3,24 +3,19 @@
     margin: 0;
 }
 .container{
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 1000;
-    .row{
-        height: 3.125rem;
-        width: 100%;
-        position: fixed;
-        bottom: 0;
-    
-        .item{
-            width: 25%;
-            height: 100%;
-        }
-    
-     
+    width: 100%;
+    .menu{
+       height: 3.125rem;
+       width: 100%;
+       position: fixed;
+       margin: 0;
+       bottom: 0;
+       .item{
+           width: 25%;
+           height: 100%;
+       }
+
     }
-}
-    
+
+    }
 

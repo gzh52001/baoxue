@@ -61,16 +61,16 @@ class App extends React.Component {
         })
     }
     render() {
-        const { menu} = this.state;
+        const { menu, current } = this.state;
         return (
             <div className="container">
-                  
                         <Menu
                             mode="horizontal"
                             theme="dark"
                             onClick={this.changeMenu}
+                            className="menu"
+                            selectedKeys={[current]}
                            
-                            className="row"
                         >
                             {
                                 menu.map(item => (
@@ -78,7 +78,6 @@ class App extends React.Component {
                                 ))
                             }
                         </Menu>
-                  
 
                 <Switch>
                     {
