@@ -7,19 +7,6 @@ html {
   font-size: 50px;
 }
 
-.container {
-  width: 100%;
-}
-
-.container .menu {
-  height: 3.125rem;
-  width: 100%;
-  position: fixed;
-  margin: 0;
-  bottom: 0;
-}
-
-.container .menu .item {
-  width: 25%;
-  height: 100%;
+body {
+  background: #f4f4f4;
 }

@@ -1,1 +1,9 @@
-*{padding:0;margin:0}html{font-size:50px}.container{width:100%}.container .menu{height:3.125rem;width:100%;position:fixed;margin:0;bottom:0}.container .menu .item{width:25%;height:100%}
+<<<<<<< HEAD
+<<<<<<< HEAD
+*{padding:0;margin:0}html{font-size:50px}.container{width:100%}.container .menu{height:1rem;width:100%;position:fixed;margin:0;bottom:0;left:0;z-index:999}.container .menu .item{width:25%;height:100%}
+=======
+*{padding:0;margin:0}html{font-size:50px}body{background:#f4f4f4}.container{width:100%}.container .menu{height:50px;width:100%;position:fixed;margin:0;bottom:0;left:0;z-index:999}.container .menu .item{width:25%;height:100%}
+>>>>>>> 0cb62da87f2f101cb0d9844f5a7087d503d9f747
+=======
+*{padding:0;margin:0}html{font-size:50px}body{background:#f4f4f4}
+>>>>>>> panjialin
