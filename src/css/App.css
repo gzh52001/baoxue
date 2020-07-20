@@ -10,22 +10,3 @@ html {
 body {
   background: #f4f4f4;
 }
-
-.container {
-  width: 100%;
-}
-
-.container .menu {
-  height: 50px;
-  width: 100%;
-  position: fixed;
-  margin: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 999;
-}
-
-.container .menu .item {
-  width: 25%;
-  height: 100%;
-}
