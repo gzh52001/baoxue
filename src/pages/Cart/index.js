@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import Tabbar from '../../components/Tabbar'
 
 
 class Cart extends Component{
@@ -7,6 +8,7 @@ class Cart extends Component{
         return (
             <div>
                 Cart
+                <Tabbar/>
             </div>
         )
     }

@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-
+import Tabbar from '../../components/Tabbar'
 
 class Mine extends Component{
     render(){
@@ -7,6 +7,7 @@ class Mine extends Component{
         return (
             <div>
                 Mine
+                <Tabbar/>
             </div>
         )
     }

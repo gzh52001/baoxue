@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Carousel } from 'antd';
 import { getList } from '../../utils/request'
+import Tabbar from '../../components/Tabbar'
 //引入样式
-import '../Home/style.css'
+import '../Home/sy.css'
 
 
 class Home extends Component {
@@ -47,66 +48,66 @@ class Home extends Component {
                     {/* 列表*/}
                     <div className="game-list ">
 
-                       
 
-                            <ul className>
-                                <li >
-                                    <div className="game-item">
-                                        <div className="game-icon">
-                                            <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
-                                        </div>
+
+                        <ul >
+                            <li >
+                                <div className="game-item">
+                                    <div className="game-icon">
+                                        <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
                                     </div>
-                                </li>
-                                <li >
-                                    <div className="game-item">
-                                        <div className="game-icon">
-                                            <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
-                                        </div>
+                                </div>
+                            </li>
+                            <li >
+                                <div className="game-item">
+                                    <div className="game-icon">
+                                        <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
                                     </div>
-                                </li>
-                                <li >
-                                    <div className="game-item">
-                                        <div className="game-icon">
-                                            <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
-                                        </div>
+                                </div>
+                            </li>
+                            <li >
+                                <div className="game-item">
+                                    <div className="game-icon">
+                                        <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
                                     </div>
-                                </li>
-                                <li >
-                                    <div className="game-item">
-                                        <div className="game-icon">
-                                            <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
-                                        </div>
+                                </div>
+                            </li>
+                            <li >
+                                <div className="game-item">
+                                    <div className="game-icon">
+                                        <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
                                     </div>
-                                </li>
-                                <li >
-                                    <div className="game-item">
-                                        <div className="game-icon">
-                                            <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
-                                        </div>
+                                </div>
+                            </li>
+                            <li >
+                                <div className="game-item">
+                                    <div className="game-icon">
+                                        <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
                                     </div>
-                                </li>
-                                <li >
-                                    <div className="game-item">
-                                        <div className="game-icon">
-                                            <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
-                                        </div>
+                                </div>
+                            </li>
+                            <li >
+                                <div className="game-item">
+                                    <div className="game-icon">
+                                        <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
                                     </div>
-                                </li>
-                                <li >
-                                    <div className="game-item">
-                                        <div className="game-icon">
-                                            <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
-                                        </div>
+                                </div>
+                            </li>
+                            <li >
+                                <div className="game-item">
+                                    <div className="game-icon">
+                                        <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
                                     </div>
-                                </li>
-                            </ul>
-                         
-                       
+                                </div>
+                            </li>
+                        </ul>
 
 
 
 
-                 </div>
+
+
+                    </div>
 
                 </div>
 
@@ -144,61 +145,64 @@ class Home extends Component {
                     <div className="flexbox">
 
                         <li className="flexbox-item">
-                            <img className="icon" alt="" src="http://nos.netease.com/dmall-mc/1-%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB.png4a3ef1f5-c862-4754-9a0f-017a80cc0a4f?download=1-%25E5%25B1%2585%25E5%25AE%25B6%25E7%2594%259F%25E6%25B4%25BB.png&amp;Signature=%2FIgiyVMf1CqG1zc0GtrJF7QLU9fm86cMi4pYIUOAVAI%3D&amp;Expires=1595125476&amp;NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84" />
+                            <img className="icon" alt="" src="http://nos.netease.com/dmall-mc/1-%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB.png4a3ef1f5-c862-4754-9a0f-017a80cc0a4f?download=1-%25E5%25B1%2585%25E5%25AE%25B6%25E7%2594%259F%25E6%25B4%25BB.png" />
                             <span className="text">居家生活</span>
                         </li>
                         <li className="flexbox-item">
-                            <img className="icon" alt="" src="http://nos.netease.com/dmall-mc/1-%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB.png4a3ef1f5-c862-4754-9a0f-017a80cc0a4f?download=1-%25E5%25B1%2585%25E5%25AE%25B6%25E7%2594%259F%25E6%25B4%25BB.png&amp;Signature=%2FIgiyVMf1CqG1zc0GtrJF7QLU9fm86cMi4pYIUOAVAI%3D&amp;Expires=1595125476&amp;NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84" />
+                            <img className="icon" alt="" src="http://nos.netease.com/dmall-mc/1-%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB.png4a3ef1f5-c862-4754-9a0f-017a80cc0a4f?download=1-%25E5%25B1%2585%25E5%25AE%25B6%25E7%2594%259F%25E6%25B4%25BB.png" />
                             <span className="text">居家生活</span>
                         </li>
                         <li className="flexbox-item">
-                            <img className="icon" alt="" src="http://nos.netease.com/dmall-mc/1-%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB.png4a3ef1f5-c862-4754-9a0f-017a80cc0a4f?download=1-%25E5%25B1%2585%25E5%25AE%25B6%25E7%2594%259F%25E6%25B4%25BB.png&amp;Signature=%2FIgiyVMf1CqG1zc0GtrJF7QLU9fm86cMi4pYIUOAVAI%3D&amp;Expires=1595125476&amp;NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84" />
+                            <img className="icon" alt="" src="http://nos.netease.com/dmall-mc/1-%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB.png4a3ef1f5-c862-4754-9a0f-017a80cc0a4f?download=1-%25E5%25B1%2585%25E5%25AE%25B6%25E7%2594%259F%25E6%25B4%25BB.png" />
                             <span className="text">居家生活</span>
                         </li>
                         <li className="flexbox-item">
-                            <img className="icon" alt="" src="http://nos.netease.com/dmall-mc/1-%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB.png4a3ef1f5-c862-4754-9a0f-017a80cc0a4f?download=1-%25E5%25B1%2585%25E5%25AE%25B6%25E7%2594%259F%25E6%25B4%25BB.png&amp;Signature=%2FIgiyVMf1CqG1zc0GtrJF7QLU9fm86cMi4pYIUOAVAI%3D&amp;Expires=1595125476&amp;NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84" />
+                            <img className="icon" alt="" src="http://nos.netease.com/dmall-mc/1-%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB.png4a3ef1f5-c862-4754-9a0f-017a80cc0a4f?download=1-%25E5%25B1%2585%25E5%25AE%25B6%25E7%2594%259F%25E6%25B4%25BB.png" />
                             <span className="text">居家生活</span>
                         </li>
-                    </div>
-                 <div className="flexbox">
 
-                    <li className="flexbox-item">
-                        <img className="icon" alt="" src="http://nos.netease.com/dmall-mc/1-%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB.png4a3ef1f5-c862-4754-9a0f-017a80cc0a4f?download=1-%25E5%25B1%2585%25E5%25AE%25B6%25E7%2594%259F%25E6%25B4%25BB.png&amp;Signature=%2FIgiyVMf1CqG1zc0GtrJF7QLU9fm86cMi4pYIUOAVAI%3D&amp;Expires=1595125476&amp;NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84" />
-                        <span className="text">居家生活</span>
-                    </li>
-                    <li className="flexbox-item">
-                        <img className="icon" alt="" src="http://nos.netease.com/dmall-mc/1-%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB.png4a3ef1f5-c862-4754-9a0f-017a80cc0a4f?download=1-%25E5%25B1%2585%25E5%25AE%25B6%25E7%2594%259F%25E6%25B4%25BB.png&amp;Signature=%2FIgiyVMf1CqG1zc0GtrJF7QLU9fm86cMi4pYIUOAVAI%3D&amp;Expires=1595125476&amp;NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84" />
-                        <span className="text">居家生活</span>
-                    </li>
+                    </div>
+                    <div className="flexbox">
+
                         <li className="flexbox-item">
-                        <img className="icon" alt="" src="http://nos.netease.com/dmall-mc/1-%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB.png4a3ef1f5-c862-4754-9a0f-017a80cc0a4f?download=1-%25E5%25B1%2585%25E5%25AE%25B6%25E7%2594%259F%25E6%25B4%25BB.png&amp;Signature=%2FIgiyVMf1CqG1zc0GtrJF7QLU9fm86cMi4pYIUOAVAI%3D&amp;Expires=1595125476&amp;NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84" />
-                        <span className="text">居家生活</span>
-                    </li>
-                    <li className="flexbox-item">
-                        <img className="icon" alt="" src="http://nos.netease.com/dmall-mc/1-%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB.png4a3ef1f5-c862-4754-9a0f-017a80cc0a4f?download=1-%25E5%25B1%2585%25E5%25AE%25B6%25E7%2594%259F%25E6%25B4%25BB.png&amp;Signature=%2FIgiyVMf1CqG1zc0GtrJF7QLU9fm86cMi4pYIUOAVAI%3D&amp;Expires=1595125476&amp;NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84" />
-                        <span className="text">居家生活</span>
-                    </li>
-                 </div>
+                            <img className="icon" alt="" src="http://nos.netease.com/dmall-mc/1-%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB.png4a3ef1f5-c862-4754-9a0f-017a80cc0a4f?download=1-%25E5%25B1%2585%25E5%25AE%25B6%25E7%2594%259F%25E6%25B4%25BB.png" />
+                            <span className="text">居家生活</span>
+                        </li>
+                        <li className="flexbox-item">
+                            <img className="icon" alt="" src="http://nos.netease.com/dmall-mc/1-%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB.png4a3ef1f5-c862-4754-9a0f-017a80cc0a4f?download=1-%25E5%25B1%2585%25E5%25AE%25B6%25E7%2594%259F%25E6%25B4%25BB.png" />
+                            <span className="text">居家生活</span>
+                        </li>
+                        <li className="flexbox-item">
+                            <img className="icon" alt="" src="http://nos.netease.com/dmall-mc/1-%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB.png4a3ef1f5-c862-4754-9a0f-017a80cc0a4f?download=1-%25E5%25B1%2585%25E5%25AE%25B6%25E7%2594%259F%25E6%25B4%25BB.png" />
+                            <span className="text">居家生活</span>
+                        </li>
+                        <li className="flexbox-item">
+                            <img className="icon" alt="" src="http://nos.netease.com/dmall-mc/1-%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB.png4a3ef1f5-c862-4754-9a0f-017a80cc0a4f?download=1-%25E5%25B1%2585%25E5%25AE%25B6%25E7%2594%259F%25E6%25B4%25BB.png" />
+                            <span className="text">居家生活</span>
+                        </li>
+
+                    </div>
+
 
                 </div>
-                 
+
                 {/*人气推荐*/}
                 <div className="home-hot-items">
-                <div className="section-header">人气推荐 <span >更多</span>  </div>
-                <div class="hot-item" >
-                    <span>魔兽世界 希尔瓦娜斯无线充</span>
+                    <div className="section-header">人气推荐 <span >更多</span>  </div>
+                    <div className="hot-item" >
+                        <span>魔兽世界 希尔瓦娜斯无线充</span>
+                    </div>
+                    <div className="hot-item" >
+                        <span>魔兽世界 希尔瓦娜斯无线充</span>
+                    </div>
+
+
                 </div>
-                <div class="hot-item" >
-                    <span>魔兽世界 希尔瓦娜斯无线充</span>
-                </div>
-                   
-                     
-                </div>
 
 
 
 
-
+               <Tabbar/>
 
             </div>
         )

@@ -1,95 +1,33 @@
-import React from 'react';
-import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
-import { Menu } from 'antd';
-import { HomeOutlined, UserOutlined, UnorderedListOutlined ,
-    ShoppingCartOutlined} from '@ant-design/icons';
-
-import 'antd/dist/antd.css'
-//引入样式
-import './css/App.css'
-
-//引入页面组件
-import Home from './pages/Home'
-import Sort from './pages/Sort'
-import Cart  from './pages/Cart'
-import Mine from './pages/Mine'
+import React,{Component} from 'react';
+import {withRouter,Switch,Route,Redirect} from 'react-router-dom'
+import './css/App.css';
 
 
-class App extends React.Component {
+//引入页面
+import Home from './pages/Home';
+import Sort from './pages/Sort';
+import Cart from './pages/Cart';
+import Mine from './pages/Mine';
+import Detail from './pages/Detail';
 
-    state = {
-        current: '/home',
-        menu: [{
-            title: '首页',
-            path: '/Home',
-            icon: <HomeOutlined />,
-            component: Home,
-        }, {
-            title: '分类',
-            path: '/Sort',
-            icon: < UnorderedListOutlined />,
-            component:Sort,
-        }, {
-            title: '购物车',
-            path: '/Cart',
-            icon: < ShoppingCartOutlined/>,
-            component: Cart,
-        },
-        {
-            title: '我的',
-            path: '/Mine',
-            icon: <UserOutlined/>,
-            component: Mine,
-        }
-    ]
-    }
-    changeMenu = ({ key, item }) => {
-        console.log('key=', key, item);
-        this.goto(key);
-        this.setState({
-            current: key
-        })
 
-    }
-    goto = (path) => {
-        this.props.history.push(path);
-    }
-    componentDidMount() {
-        const { location: { pathname } } = this.props;
-        this.setState({
-            current: pathname
-        })
-    }
-    render() {
-        const { menu, current } = this.state;
-        return (
-            <div className="container">
-                        <Menu
-                            mode="horizontal"
-                            theme="dark"
-                            onClick={this.changeMenu}
-                            className="menu"
-                            selectedKeys={[current]}
-                           
-                        >
-                            {
-                                menu.map(item => (
-                                    <Menu.Item title={item.title} key={item.path} icon={item.icon} className="item">{item.title }</Menu.Item>
-                                ))
-                            }
-                        </Menu>
-
-                <Switch>
-                    {
-                        menu.map(item => <Route key={item.path} path={item.path} component={item.component} />)
-                    }
-                 
-                    <Redirect from='/' to='/home' exact />
-                </Switch>
-            </div>
-        )
-    }
+class App extends Component{
+  render(){
+  return (
+    <div className="App">
+    
+      <Switch>
+        <Route path='/home' component={Home}></Route>
+        <Route path='/mine' component={Mine}></Route>
+        <Route path='/sort' component={Sort}></Route>
+        <Route path='/cart' component={Cart}></Route>
+        <Route path='/detail' component={Detail}></Route>
+   
+        <Redirect from='/' to='/home' exact></Redirect>
+      </Switch>
+    </div>
+  );
 }
-App = withRouter(App);
+}
+App = withRouter(App)
 export default App;
-

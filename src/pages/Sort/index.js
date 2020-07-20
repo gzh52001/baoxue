@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-
+import Tabbar from '../../components/Tabbar'
 
 class Sort extends Component{
     render(){
@@ -7,6 +7,7 @@ class Sort extends Component{
         return (
             <div>
                 Sort
+                <Tabbar/>
             </div>
         )
     }
