@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { Menu } from 'antd';
-import { HomeOutlined, UserOutlined, EyeOutlined ,
+import { HomeOutlined, UserOutlined, UnorderedListOutlined ,
     ShoppingCartOutlined} from '@ant-design/icons';
 
 import 'antd/dist/antd.css'
@@ -27,7 +27,7 @@ class App extends React.Component {
         }, {
             title: '分类',
             path: '/Sort',
-            icon: < EyeOutlined />,
+            icon: < UnorderedListOutlined />,
             component:Sort,
         }, {
             title: '购物车',
