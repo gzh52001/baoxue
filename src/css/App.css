@@ -17,6 +17,8 @@ html {
   position: fixed;
   margin: 0;
   bottom: 0;
+  left: 0;
+  z-index: 999;
 }
 
 .container .menu .item {
