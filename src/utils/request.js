@@ -45,4 +45,8 @@ service.interceptors.response.use(res=>{
 export const getList = ()=>{
     return service.get("/api/webShop/category/itemList?1595039076879")
 }
+export const getRank = ()=>{
+    return service.get("/api/webShop/index/listRank?1595317820069")
+}
+
 
