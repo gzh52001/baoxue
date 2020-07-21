@@ -8,7 +8,7 @@ import '../Home/sy.css'
 
 class Home extends Component {
     state = {
-        list: []
+      
     };
 
     getData = () => {
@@ -16,7 +16,7 @@ class Home extends Component {
             console.log(res)
 
             this.setState({
-                list: []
+                
 
             })
         })
@@ -31,76 +31,68 @@ class Home extends Component {
 
     render() {
 
-        const { list } = this.state;
-        console.log(list);
         return (
             <div className="container">
-                {/* 搜索框 */}
+                {/* 头部 */}
                 <div className="header-container">
+                    {/*搜索框*/}
                     <div className="searchBar clear_fix">
-                        <div className="logoImg"></div>
-                        <div className="search-box">
-                            <input type="search" placeholder="搜索商品，共235款好物" />
+                            <div className="logoImg"></div>
+                            <div className="search-box">
+                                <input type="search"  />
+                                 <span className="placeHolder">搜索商品，共235款好物</span>
+                                 
+                               
 
-
-                        </div>
-                    </div>
-
-                 {/* 列表*/}
-                <div className="game-list">
-                        <div className="game-list-item">
-                            
-                           
-                            <li className="list">
-                                <div className="game-icon">
-                                   
-                                        <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
-                                   
-                                </div>
-                            </li>
-                            <li className="list">
-                                <div className="game-icon">
-                                   
-                                        <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
-                                   
-                                </div>
-                            </li>
-                            <li className="list">
-                                <div className="game-icon">
-                                   
-                                        <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
-                                   
-                                </div>
-                            </li>
-                            <li className="list">
-                                <div className="game-icon">
-                                   
-                                        <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
-                                   
-                                </div>
-                            </li>
-                            <li className="list">
-                                <div className="game-icon">
-                                   
-                                        <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
-                                   
-                                </div>
-                            </li>
-                            <li className="list">
-                                <div className="game-icon">
-                                   
-                                        <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
-                                   
-                                </div>
-                            </li>
-                           
-                            
+                            </div>
                         </div>
 
+                    {/* 游戏列表*/}
+
+                    <div className="game-list-box">
+                     <div className="swiper-container">
+                         <div className="swiper-list">
+                             <li className="list">
+                                     <div className="game-icon">
+                                    
+                                      <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
+                                    
+                                     </div>
+                             </li>
+                             <li className="list">
+                                     <div className="game-icon">
+                                    
+                                      <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
+                                    
+                                     </div>
+                             </li>
+                             <li className="list">
+                                     <div className="game-icon">
+                                    
+                                      <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
+                                    
+                                     </div>
+                             </li>
+                             <li className="list">
+                                     <div className="game-icon">
+                                    
+                                      <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
+                                    
+                                     </div>
+                             </li>
+                             <li className="list">
+                                     <div className="game-icon">
+                                    
+                                      <img src="http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png" alt="游戏图标" />
+                                    
+                                     </div>
+                             </li>
+                         </div>
+ 
+                     </div>
 
 
-                    </div>
-
+                 </div>
                 </div>
 
                 {/*轮播图*/}
@@ -120,7 +112,8 @@ class Home extends Component {
 
 
                 </Carousel>
-                {/*item*/}
+                
+                {/*七天无理由退货*/}
                 <div className="am-flexbox">
 
                     <div className="note-item">
@@ -132,6 +125,7 @@ class Home extends Component {
 
                     </div>
                 </div>
+               
                 {/*类别*/}
                 <div className="category-container">
                     <div className="flexbox">
@@ -182,7 +176,7 @@ class Home extends Component {
                 <div className="home-hot-items">
                     <div className="section-header">人气推荐 <span >更多</span>  </div>
                     <div className="hot-item" >
-                        <img alt="" src="http://nos.netease.com/dmall-mc/696%C3%97282.jpg8bfdb1f6-64c3-4bb8-ba0f-e1061b313a7a?download=696%25C3%2597282.jpg&Signature=%2F06CT%2Bp%2B8%2B3SfXcyI2DLQPoUdqo17B7o1lYf4%2BYGvk4%3D&Expires=1595303686&NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84"></img>
+                        <img alt="" src="http://nos.netease.com/dmall-mc/696%C3%97282.jpg8bfdb1f6-64c3-4bb8-ba0f-e1061b313a7a?download=696%25C3%2597282.jpg&Signature=o5nbD61kYAEz62VGtin3UNj1Z3vmnK%2F14jp58PEhSBc%3D&Expires=1595397829&NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84"/>
                         <span>魔兽世界 希尔瓦娜斯无线充</span>
                     </div>
                     
@@ -238,10 +232,123 @@ class Home extends Component {
                              <div className="price">¥188.00</div>
                          </div>
                          </div>
+                        
+                         <div className="container-swiper" >
+                           <ul className="list-swiper">
+
+                              <li>
+                                <div className="new-product-item">
+                                  <div className="img-container" >
+                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
+                                  </div>
+                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
+                                <div className="prod-price">¥427.00</div></div>
+                              </li>
+                              <li>
+                                <div className="new-product-item">
+                                  <div className="img-container" >
+                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
+                                  </div>
+                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
+                                <div className="prod-price">¥427.00</div></div>
+                              </li>
+                              <li>
+                                <div className="new-product-item">
+                                  <div className="img-container" >
+                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
+                                  </div>
+                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
+                                <div className="prod-price">¥427.00</div></div>
+                              </li>
+                              <li>
+                                <div className="new-product-item">
+                                  <div className="img-container" >
+                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
+                                  </div>
+                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
+                                <div className="prod-price">¥427.00</div></div>
+                              </li>
+                              <li>
+                                <div className="new-product-item">
+                                  <div className="img-container" >
+                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
+                                  </div>
+                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
+                                <div className="prod-price">¥427.00</div></div>
+                              </li>
+
+                           </ul>
+
                          </div>
                  
                   
+               </div>
+                   
+                {/*商品选购*/}
+                 <div className="floor-list">
+                    <div className="floor-container">
+                    <div className="floor-banner">
 
+                        <img src="http://nos.netease.com/dmall-mc/banner750_370%E6%9E%AD%E5%85%BD%E5%AE%9D%E5%AE%9D.jpg26fb69f4-f237-4949-a35b-db9c9fc3319f?download=banner750_370%25E6%259E%25AD%25E5%2585%25BD%25E5%25AE%259D%25E5%25AE%259D.jpg&amp;Signature=GNhKLvR2dqV3IPpCcTJlNN71XCkiag%2FDRDEPy1b9TiY%3D&amp;Expires=1595397830&amp;NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84" alt="楼层banner图"/>
+
+                     </div>
+
+                     <div className="floor-prods" >
+                         <div className="swiper-container">
+                           <ul className="list-swiper">
+                              <li>
+                                <div className="new-product-item">
+                                  <div className="img-container" >
+                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
+                                  </div>
+                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
+                                <div className="prod-price">¥427.00</div></div>
+                              </li>
+                              <li>
+                                <div className="new-product-item">
+                                  <div className="img-container" >
+                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
+                                  </div>
+                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
+                                <div className="prod-price">¥427.00</div></div>
+                              </li>
+                              <li>
+                                <div className="new-product-item">
+                                  <div className="img-container" >
+                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
+                                  </div>
+                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
+                                <div className="prod-price">¥427.00</div></div>
+                              </li>
+                              <li>
+                                <div className="new-product-item">
+                                  <div className="img-container" >
+                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
+                                  </div>
+                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
+                                <div className="prod-price">¥427.00</div></div>
+                              </li>
+                              <li>
+                                <div className="new-product-item">
+                                  <div className="img-container" >
+                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
+                                  </div>
+                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
+                                <div className="prod-price">¥427.00</div></div>
+                              </li>
+
+                           </ul>
+
+                           </div>
+                         </div>
+                    
+
+
+
+                    </div>
+
+                 </div>
+                  
 
 
                 <Tabbar />
@@ -250,5 +357,6 @@ class Home extends Component {
         )
     }
 }
+
 
 export default Home;

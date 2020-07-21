@@ -66,16 +66,14 @@ class Tabbar extends React.Component {
     return (
         <div className="container">
         <Menu
-            mode="horizontal"
-            theme="dark"
-            onClick={this.changeMenu}
             className="menu"
+            mode="horizontal"
+            onClick={this.changeMenu}
             selectedKeys={[current]}
-           
         >
             {
                 menu.map(item => (
-                    <Menu.Item title={item.title} key={item.path} icon={item.icon} className="item">{item.title }</Menu.Item>
+                    <Menu.Item className="item" title={item.title} key={item.path} icon={item.icon} >{item.title }</Menu.Item>
                 ))
             }
         </Menu>

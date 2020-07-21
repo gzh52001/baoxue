@@ -20,7 +20,7 @@ const service = axios.create({
 //请求之前的拦截
 //我们可以在发送请求之前，可以在请求头上面携带一些信息例如token，将其转送给后端，进行token验证操作。
 service.interceptors.request.use(config=>{
-    // console.log("request-config",config)
+    
     //后续authToken值肯定需要从本地存储取出来，然后再去发给后端
     config.data = {...config.data,authToken:"adjlsajdlaoeuasd"}
     return config
