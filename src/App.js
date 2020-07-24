@@ -9,6 +9,7 @@ import Sort from './pages/Sort';
 import Cart from './pages/Cart';
 import Mine from './pages/Mine';
 import Detail from './pages/Detail';
+import Itemlist from './pages/Itemlist';
 
 
 class App extends Component{
@@ -22,6 +23,7 @@ class App extends Component{
         <Route path='/sort' component={Sort}></Route>
         <Route path='/cart' component={Cart}></Route>
         <Route path='/detail' component={Detail}></Route>
+        <Route path='/itemlist' component={Itemlist}></Route>
    
         <Redirect from='/' to='/home' exact></Redirect>
       </Switch>

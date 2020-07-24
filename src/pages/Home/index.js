@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Carousel } from 'antd';
-import { getList, getRank } from '../../utils/request'
+import { getList, getRank, getHot,getGame,getItem} from '../../utils/request'
 import Tabbar from '../../components/Tabbar'
 //引入样式
 import '../Home/sy.css'
@@ -9,42 +9,6 @@ import '../Home/sy.css'
 class Home extends Component {
     state = {
 
-
-      list:[
-            {
-               id:1,
-               icon:"http://nos.netease.com/dmall-mc/1.png2c4e32c6-0f77-47eb-b1d3-b0e2d4e654be?download=1.png&Signature=jn70AUkVvvFkmf720GOB1y%2FgsEGU3ZD08vxFIcuUerY%3D&Expires=1595397830&NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84",
-            },
-            {
-               id:2,
-               icon:"http://nos.netease.com/dmall-mc/2.png4f80c069-d22f-4901-acb5-a080dd74a97b?download=2.png&Signature=fZ0Dx0eb3mDW2b3i2vkPYrIM1iVwdehEXkpNMq8zJCA%3D&Expires=1595407324&NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84",
-            },
-            {
-               id:3,
-               icon:"http://nos.netease.com/dmall-mc/3.pngd56209b0-e3c0-43c5-9513-803cb2bdce0c?download=3.png&Signature=xpD4Ygl0TYqs52d8Jm1XVYNfGZR9xNwesMN54wlfL4s%3D&Expires=1595407324&NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84",
-            },
-            {
-               id:4,
-               icon:"http://nos.netease.com/dmall-mc/4.png9fc98892-8cea-4e5d-b370-7e071f1aecc7?download=4.png&Signature=Eve2OMWgyKIL6Ok7qD4aHNyXdIOXJmGYVEq4kXuJJxk%3D&Expires=1595407324&NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84",
-            },
-            {
-               id:5,
-               icon:"http://nos.netease.com/dmall-mc/5.pngcb65c604-c502-47e2-93cb-2758c331d037?download=5.png&Signature=k47SIgu39bLSc9hWV3Wp56PeUovlsVWCf6ztorOAud0%3D&Expires=1595407324&NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84",
-            },
-            {
-               id:6,
-               icon:"http://nos.netease.com/dmall-mc/H5%E5%AE%88%E6%9C%9BLOGO.pnga0ca8550-299a-470a-8f99-967fe487250a?download=H5%25E5%25AE%2588%25E6%259C%259BLOGO.png&Signature=7puXqYgrYTnkEpPcU7MHewey1AuTjoIiR%2B8oe%2BOfKEQ%3D&Expires=1595411175&NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84",
-            },
-            {
-               id:7,
-               icon:"http://nos.netease.com/dmall-mc/7.png758ddc36-96cf-4858-aec7-f1a0ecb9408a?download=7.png&Signature=GyJd%2BnFC73Cp7uqMh5hWGXLy8Imb7NvQNMvo1k0CI9I%3D&Expires=1595411175&NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84",
-            },
-            {
-               id:8,
-               icon:"http://nos.netease.com/dmall-mc/90x90.png1a443729-d118-47f8-b828-eaaa64ed309e?download=90x90.png&Signature=BAd5plvkqGIs9lsAvPZaI3J%2Bukx9N%2F%2F5ucYEQ%2FVk4wU%3D&Expires=1595407348&NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84",
-            },
-
-      ],
       game:[
         {
           id:1,
@@ -94,19 +58,52 @@ class Home extends Component {
 
       ],
 
+      banner1:[
+          {
+            id:1,
+            bannerUrl:"http://nos.netease.com/dmall-mc/banner750_370%E6%9E%AD%E5%85%BD%E5%AE%9D%E5%AE%9D.jpg26fb69f4-f237-4949-a35b-db9c9fc3319f?download=banner750_370%25E6%259E%25AD%25E5%2585%25BD%25E5%25AE%259D%25E5%25AE%259D.jpg&Signature=l9j8NRAkPF8uHpgtlGTHMaiOsMr0b3M2aPBijI2t%2BhM%3D&Expires=1595485396&NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84"
+         
+          },
+          {
+            id:2,
+            bannerUrl:"http://nos.netease.com/dmall-mc/banner750_370%E5%AE%88%E6%9C%9B%E6%89%8B%E5%8A%9E.jpg9b1da925-fdf7-45f2-8a30-55625b5277e0?download=banner750_370%25E5%25AE%2588%25E6%259C%259B%25E6%2589%258B%25E5%258A%259E.jpg&Signature=6766UJ2W5iVF4guy%2BnGMHr7v1iVuoSNvZ7vU74ZIrJg%3D&Expires=1595485396&NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84"
+          },
+          {
+            id:3,
+            bannerUrl:"http://nos.netease.com/dmall-mc/banner750_370%E5%90%89%E5%AE%89%E5%A8%9C%E6%97%A0%E7%BA%BF%E5%85%85.jpg5b6a3e0c-9280-42c3-8401-30221fef23a9?download=banner750_370%25E5%2590%2589%25E5%25AE%2589%25E5%25A8%259C%25E6%2597%25A0%25E7%25BA%25BF%25E5%2585%2585.jpg&Signature=BzDSy6%2Ba9k179sHLcr9hw085TO0EGM0MofwI7dMcwKI%3D&Expires=1595485396&NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84"
+          },
+          {
+            id:4,
+            banner1:"http://nos.netease.com/dmall-mc/%E5%AE%88%E6%9C%9B%E5%85%88%E9%94%8B-%E9%85%8D%E9%A5%B0banner750x370.jpg3cab53b2-22c5-4951-a3b4-710b7a9ed2d9?download=%25E5%25AE%2588%25E6%259C%259B%25E5%2585%2588%25E9%2594%258B-%25E9%2585%258D%25E9%25A5%25B0banner750x370.jpg&Signature=L%2F768pWB4VpAk2b%2FKsMPMQuL5ipKCF7a50istX2OEb8%3D&Expires=1595485396&NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84"
+          },
+          {
+            id:4,
+            bannerUrl:"http://nos.netease.com/dmall-mc/banner750_370%E5%8D%AB%E8%A1%A3.jpg176cc9ef-7ee1-4c6e-91c1-c0bf47bb134f?download=banner750_370%25E5%258D%25AB%25E8%25A1%25A3.jpg&Signature=PyIE1A7NsDUdKzYNbLkbAP04QBP2Stu2O%2F7sTfW0114%3D&Expires=1595485396&NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84"
+          },
+          {
+            id:5,
+            bannerUrl:"http://nos.netease.com/dmall-mc/%E5%9B%BE%E4%B9%A6%E5%88%86%E5%8C%BAbanner750_370.jpg47203b8f-9c85-4731-a47e-2ddb64f1b5bc?download=%25E5%259B%25BE%25E4%25B9%25A6%25E5%2588%2586%25E5%258C%25BAbanner750_370.jpg&Signature=tTLGNEKijhl8FMb8Pke64gZhw95pUuKnbeNnRwu3GwU%3D&Expires=1595485396&NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84"
+          },
 
+      ],
       data:[],
       rank:[],
+      pic:[],
+      detail:[],
+      shopping:[],
+      shop:[],
+      li:[],
+    
     };
 
-    getData = () => {
+    getdata = () => {
         getList().then(data => {
             
 
             this.setState({data})
             
         })
-    }
+    };
     getmssj = () => {
         getRank().then(res => {
             
@@ -117,22 +114,52 @@ class Home extends Component {
             
             
         })
+    };
+    gethot = () => {
+        getHot().then(hot => {
+            
+          const pic = hot.slice(0,1).filter(item=>item.id);
+          const detail = hot.slice(1,7).filter(item=>item.id);
+         
+
+            this.setState({pic ,detail})
+            
+        })
+    };
+    getgame = () => {
+        getGame().then(shopping => {
+            this.setState({shopping})
+        })
+    };
+    getitem = () => {
+        getItem().then(shop => {
+
+           const li = shop[5].indexItemList;
+            this.setState({shop,li})
+            console.log(shop);
+            console.log(li);
+        })
+    };
+
+    goto = (id)=>{
+      this.props.history.push('/Detail/'+id);
     }
-
-
+    itemlist = (id)=>{
+      this.props.history.push('/Itemlist/'+id);
+    }
 
     componentDidMount() {
-        this.getData();
-        this.getmssj();
-
+        this.getdata();
+        this.getmssj(); 
+        this.gethot();
+        this.getgame();
+        this.getitem();
 
     }
 
-
     render() {
-        const {data ,game,rank,banner,list} = this.state;
+        const {data ,game,rank,banner,pic,detail,shopping,shop,li} = this.state;
         
-       
         return (
             <div className="container">
                 {/* 头部 */}
@@ -155,12 +182,12 @@ class Home extends Component {
                      <div className="swiper-container">
                          <div className="swiper-list">
                              
-                             {list.map((item,index)=>{
+                             {shopping.map((item,index)=>{
                                   return(
                                     <li className="list" key={index}>
                                     <div className="game-icon">
                                    
-                                     <img src={item.icon} alt="游戏图标" />
+                                     <img src={item.iconUrl} alt="游戏图标" />
                                    
                                     </div>
                             </li>
@@ -181,7 +208,7 @@ class Home extends Component {
                     
                    {banner.map((item,index)=>{
                          return(
-                            <div key={index}>
+                            <div key={index} onClick={this.itemlist}>
                               <img alt="" src={item.banner}></img>
                             </div>
 
@@ -212,7 +239,7 @@ class Home extends Component {
 
                       {data.map((item,idx)=> {
                            return(
-                            <li className="flexbox-item" key={idx}>
+                            <li className="flexbox-item" key={idx} onClick={this.itemlist}>
                              <img className="icon" alt="" src={item.iconUrl} />
                            <span className="text">{item.name}</span>
                            </li>
@@ -246,9 +273,9 @@ class Home extends Component {
                 </div>
 
                 {/*人气推荐*/}
-                <div className="home-hot-items">
+                <div className="home-hot-items" onClick={this.goto} >
                     <div className="section-header">人气推荐 <span >更多</span>  </div>
-                    <div className="hot-item" >
+                    <div className="hot-item" onClick={this.goto}>
                         <img alt="" src="http://nos.netease.com/dmall-mc/696%C3%97282.jpg8bfdb1f6-64c3-4bb8-ba0f-e1061b313a7a?download=696%25C3%2597282.jpg"/>
                         <span>魔兽世界 希尔瓦娜斯无线充</span>
                     </div>
@@ -257,7 +284,7 @@ class Home extends Component {
 
                     {rank.map((item,index)=> {
                            return(
-                            <div className="non-first" key={index}>
+                            <div className="non-first" key={index} onClick={this.goto}>
                             <img  alt="" src={item.listPicUrl}></img>
                                
                            <span>{item.name}</span>
@@ -288,63 +315,44 @@ class Home extends Component {
                            <span>更多</span>
                          </div>
 
-                         <div className="first-item">
-                             <div className="pic">
-                                <img alt="商品图片" src="http://dmall-mc.nosdn.127.net/未标题-1.jpg8b3ddb5a-e756-4d9b-bb0f-c0979ed024cb"/>
-                                
-                             </div>
-                        <div className="item-info" >
-                                    <img src="http://nos.netease.com/dmall-mc/4.png258b5399-e2cd-4ad5-ab2e-35017f149f8f?download=4.png" alt="游戏图标"/>
-                         <div className="item-name">暗黑破坏神艺术设定集</div>
-                         <div className="item-desc">以独特视角揭秘游戏诞生</div>
-                             <div className="price">¥188.00</div>
-                         </div>
-                         </div>
+
+                          {pic.map((item,index)=>{
+                            return(
+                              <div className="first-item" key={index}>
+                                      <div className="pic">
+                                        <img alt="商品图片" src={item.listPicUrl}/>
+                                        
+                                      </div>
+                                  <div className="item-info" >
+                                            <img src={item.iconUrl} alt="游戏图标"/>
+                                      <div className="item-name">{item.name}</div>
+                                      <div className="item-desc">{item.simpleDesc}</div>
+                                      <div className="price">￥{item.itemTag.price}</div>
+                                 </div>
+                               </div>
+                            )
+                          })}
+                         
                         
                          <div className="container-swiper" >
                            <ul className="list-swiper">
 
-                              <li>
-                                <div className="new-product-item">
-                                  <div className="img-container" >
-                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
-                                  </div>
-                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
-                                <div className="prod-price">¥427.00</div></div>
-                              </li>
-                              <li>
-                                <div className="new-product-item">
-                                  <div className="img-container" >
-                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
-                                  </div>
-                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
-                                <div className="prod-price">¥427.00</div></div>
-                              </li>
-                              <li>
-                                <div className="new-product-item">
-                                  <div className="img-container" >
-                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
-                                  </div>
-                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
-                                <div className="prod-price">¥427.00</div></div>
-                              </li>
-                              <li>
-                                <div className="new-product-item">
-                                  <div className="img-container" >
-                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
-                                  </div>
-                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
-                                <div className="prod-price">¥427.00</div></div>
-                              </li>
-                              <li>
-                                <div className="new-product-item">
-                                  <div className="img-container" >
-                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
-                                  </div>
-                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
-                                <div className="prod-price">¥427.00</div></div>
-                              </li>
+                             {detail.map((item,index)=>{
+                                  return(
+                                    <li key={index}>
+                                        <div className="new-product-item">
+                                          <div className="img-container" >
+                                              <img alt="图片" src={item.listPicUrl}/>
+                                          </div>
+                                  <div className="prod-name">{item.name}</div>
+                                  <div className="prod-price">¥{item.itemTag.realPrice}</div></div>
+                                    </li>
 
+                                  )
+
+                             })}
+
+                             
                            </ul>
 
                          </div>
@@ -353,71 +361,47 @@ class Home extends Component {
                </div>
                    
                 {/*商品选购*/}
-                 <div className="floor-list">
-                    <div className="floor-container">
-                    <div className="floor-banner">
+                  {shop.map((item,index)=>{
+                    return(
+                      <div className="floor-list" key={index}>
+                      <div className="floor-container">
+                      <div className="floor-banner">
+  
+                      <img src={item.itemCategoryVO.bannerUrlH5} alt="楼层banner图"/>
+  
+                       </div>
+  
+                       <div className="floor-prods" >
+                           <div className="swiper-container">
+                             <ul className="list-swiper">
+                                
+                               {li.map((item,index)=>{
+                                   return(
+                                    <li key={index}>
+                                      <div className="new-product-item">
+                                        <div className="img-container" >
+                                            <img alt="图片" src={item.listPicUrl}/>
+                                        </div>
+                                   <div className="prod-name">{item.name}</div>
+                                   <div className="prod-price">￥{item.itemTag.realPrice}</div></div>
+                                  </li>
+                                   )
 
-                        <img src="http://nos.netease.com/dmall-mc/banner750_370%E6%9E%AD%E5%85%BD%E5%AE%9D%E5%AE%9D.jpg26fb69f4-f237-4949-a35b-db9c9fc3319f?download=banner750_370%25E6%259E%25AD%25E5%2585%25BD%25E5%25AE%259D%25E5%25AE%259D.jpg&amp;Signature=GNhKLvR2dqV3IPpCcTJlNN71XCkiag%2FDRDEPy1b9TiY%3D&amp;Expires=1595397830&amp;NOSAccessKeyId=63c3e0b0ebcf4330a6fa86a2b4a32b84" alt="楼层banner图"/>
 
-                     </div>
-
-                     <div className="floor-prods" >
-                         <div className="swiper-container">
-                           <ul className="list-swiper">
-                              <li>
-                                <div className="new-product-item">
-                                  <div className="img-container" >
-                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
-                                  </div>
-                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
-                                <div className="prod-price">¥427.00</div></div>
-                              </li>
-                              <li>
-                                <div className="new-product-item">
-                                  <div className="img-container" >
-                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
-                                  </div>
-                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
-                                <div className="prod-price">¥427.00</div></div>
-                              </li>
-                              <li>
-                                <div className="new-product-item">
-                                  <div className="img-container" >
-                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
-                                  </div>
-                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
-                                <div className="prod-price">¥427.00</div></div>
-                              </li>
-                              <li>
-                                <div className="new-product-item">
-                                  <div className="img-container" >
-                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
-                                  </div>
-                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
-                                <div className="prod-price">¥427.00</div></div>
-                              </li>
-                              <li>
-                                <div className="new-product-item">
-                                  <div className="img-container" >
-                                      <img alt="图片" src="http://dmall-mc.nosdn.127.net/282.jpga48deb6f-6860-4c28-8ec0-7d1f870ca342"/>
-                                  </div>
-                                <div className="prod-name">守望先锋 D.Va可动人偶 手办模型</div>
-                                <div className="prod-price">¥427.00</div></div>
-                              </li>
-
-                           </ul>
-
+                               })}
+                               
+  
+                             </ul>
+  
+                             </div>
                            </div>
-                         </div>
-                    
+                      </div>
+  
+                   </div>
+                    )
 
-
-
-                    </div>
-
-                 </div>
+                  })}
                   
-
 
                 <Tabbar />
 

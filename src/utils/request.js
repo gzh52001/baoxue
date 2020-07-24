@@ -40,13 +40,27 @@ service.interceptors.response.use(res=>{
 })
 
 
-
 //请求列表数据
 export const getList = ()=>{
     return service.get("/api/webShop/category/itemList?1595039076879")
 }
+
 export const getRank = ()=>{
     return service.get("/api/webShop/index/listRank?1595317820069")
+}
+
+export const getHot = ()=>{
+    return service.get("/api/webShop/index/listNew?1595382792527")
+}
+
+export const getGame = ()=>{
+    return service.get("/api/webShop/index/listGame?1595382792650")
+}
+export const getItem = ()=>{
+    return service.get("/api/webShop/index/listItem?1595398995888")
+}
+export const getFitem = ()=>{
+    return service.post("/api/webShop/itemDetail/findItem?itemId=3409090&flag=0&1595504712149")
 }
 
 
